@@ -65,9 +65,8 @@ const HomePage: NextPage = () => {
           <div className="lg:w-1/2 flex justify-end lg:pr-10">
             <motion.div
               variants={mainVarientsLeft}
-              // animate="animate"
+              animate={animation}
               initial="initial"
-              whileInView="animate"
               className="text-2xl md:text-4xl"
             >
               <div className="text-gray-500">
@@ -109,6 +108,7 @@ const HomePage: NextPage = () => {
                   .typeString("Web Developer")
                   .pauseFor(1000)
                   .deleteAll()
+                  .pauseFor(100)
                   .typeString("Mathematician")
                   .pauseFor(1000)
                   .deleteAll()
