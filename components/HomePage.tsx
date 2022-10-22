@@ -10,7 +10,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 
-const mainVarients_l = {
+const mainVarientsLeft = {
   initial: {
     opacity: 0,
     x: -100,
@@ -21,7 +21,7 @@ const mainVarients_l = {
     transition: { duration: 0.3, type: "spring", stiffness: 100},
   },
 };
-const mainVarients_r = {
+const mainVarientsRight = {
   initial: {
     opacity: 0,
     x: 100,
@@ -32,7 +32,7 @@ const mainVarients_r = {
     transition: { duration: 0.3, type: "spring", stiffness: 100 },
   },
 };
-const mainVarients_b = {
+const mainVarientsBottom = {
   initial: {
     opacity: 0,
   },
@@ -64,7 +64,7 @@ const HomePage: NextPage = () => {
         <div className="flex lg:flex-row flex-col-reverse justify-center items-center">
           <div className="lg:w-1/2 flex justify-end lg:pr-10">
             <motion.div
-              variants={mainVarients_l}
+              variants={mainVarientsLeft}
               // animate="animate"
               initial="initial"
               whileInView="animate"
@@ -85,7 +85,7 @@ const HomePage: NextPage = () => {
           </div>
           <div className="lg:w-1/2 lg:pl-10">
             <motion.div
-              variants={mainVarients_r}
+              variants={mainVarientsRight}
               animate={animation}
               initial="initial"
               className="h-48 md:h-72 w-48 md:w-72 flex overflow-hidden"
@@ -96,7 +96,7 @@ const HomePage: NextPage = () => {
           </div>
         </div>
         <motion.div
-          variants={mainVarients_b}
+          variants={mainVarientsBottom}
           animate={animation}
           initial="initial"
           className="flex justify-center my-4 text-lg md:text-2xl lg:text-6xl"
