@@ -4,11 +4,8 @@ import Image from "next/image";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
-import {
-  Box,
-  Text,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { Box, Text, useColorModeValue } from "@chakra-ui/react";
+import SquareAnimation from "../animations/Square";
 
 const mainVarientsLeft = {
   initial: {
@@ -18,7 +15,7 @@ const mainVarientsLeft = {
   animate: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.3, type: "spring", stiffness: 100},
+    transition: { duration: 0.3, type: "spring", stiffness: 100 },
   },
 };
 const mainVarientsRight = {
@@ -44,7 +41,7 @@ const mainVarientsBottom = {
 
 const HomePage: NextPage = () => {
   const toggleOrange = useColorModeValue("orange.400", "orange.300");
-  
+
   const [ref, inView] = useInView();
   const animation = useAnimation();
   useEffect(() => {
@@ -59,8 +56,9 @@ const HomePage: NextPage = () => {
   }, [inView]);
 
   return (
-    <div className="max-w-7xl w-full mx-auto select-none">
+    <div className="max-w-7xl w-full mx-auto select-none relative">
       <div ref={ref}>
+        {inView && <div className="absolute"><SquareAnimation /></div>}
         <div className="flex lg:flex-row flex-col-reverse justify-center items-center">
           <div className="lg:w-1/2 flex justify-end lg:pr-10">
             <motion.div
@@ -72,11 +70,21 @@ const HomePage: NextPage = () => {
               <div className="text-gray-500">
                 Hello,
                 <br /> I am{" "}
-                <Text as={"span"} fontWeight="semibold" color={toggleOrange} opacity={0.9}>
+                <Text
+                  as={"span"}
+                  fontWeight="semibold"
+                  color={toggleOrange}
+                  opacity={0.9}
+                >
                   Jay Pokale
                 </Text>{" "}
                 <br /> AKA{" "}
-                <Text as={"span"} fontWeight="semibold" color={toggleOrange} opacity={0.9}>
+                <Text
+                  as={"span"}
+                  fontWeight="semibold"
+                  color={toggleOrange}
+                  opacity={0.9}
+                >
                   Dare2Solve
                 </Text>
               </div>
