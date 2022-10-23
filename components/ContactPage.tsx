@@ -29,7 +29,7 @@ const mainVarientsRight = {
 
 const HomePage: NextPage = () => {
   const toggleOrange = useColorModeValue("orange.400", "orange.300");
-  const toggleForGray = useColorModeValue(300, 600);
+  const toggleForGray = useColorModeValue('d1d5db', '475569');
 
   const [ref, inView] = useInView();
   const animation = useAnimation();
@@ -110,7 +110,12 @@ const HomePage: NextPage = () => {
                   </label>
                 </div>
 
-                <Button size={["sm", "md", "lg"]} className={`relative my-2 md:my-3 lg:my-4 after:w-0 overflow-hidden after:h-full after:absolute after:bg-gray-${toggleForGray} after:left-0 hover:after:w-full after:transition-all after:duration-300`}><span className="z-10">Submit</span></Button>
+                <Button size={["sm", "md", "lg"]} className={`relative my-2 md:my-3 lg:my-4 after:w-0 overflow-hidden after:h-full after:absolute after:left-0 hover:after:w-full after:transition-all after:duration-300`}
+                _hover={{ bg: '' }}
+                css={{
+                  '&::after':{backgroundColor:`#${toggleForGray}`}
+                }}
+                ><span className="z-10">Submit</span></Button>
 
               </div>
             </motion.div>
