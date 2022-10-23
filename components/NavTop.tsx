@@ -26,8 +26,6 @@ const NavTop: NextPage = () => {
 
   return (
     <Box
-      bg="rab(256 256 256)"
-      backdropFilter="blur(8px)"
       className="max-w-7xl w-full mx-auto select-none"
     >
       <motion.div
