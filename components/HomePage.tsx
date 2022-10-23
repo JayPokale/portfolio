@@ -7,6 +7,17 @@ import { useEffect } from "react";
 import { Box, Text, useColorModeValue } from "@chakra-ui/react";
 import SquareAnimation from "../animations/Square";
 
+const mainVarientsSquares = {
+  initial: {
+    opacity: 0,
+    scale: 0,
+  },
+  animate: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.3, type: "spring", stiffness: 100 },
+  },
+};
 const mainVarientsLeft = {
   initial: {
     opacity: 0,
@@ -57,8 +68,22 @@ const HomePage: NextPage = () => {
 
   return (
     <div className="max-w-7xl w-full mx-auto select-none relative">
+      {inView && (
+        <motion.div
+          variants={mainVarientsSquares}
+          animate={animation}
+          initial="initial"
+          className="fixed flex justify-evenly w-full -z-10"
+        >
+          <div className="">
+            <SquareAnimation />
+          </div>{" "}
+          <div className="">
+            <SquareAnimation />
+          </div>
+        </motion.div>
+      )}
       <div ref={ref}>
-        {inView && <div className="absolute"><SquareAnimation /></div>}
         <div className="flex lg:flex-row flex-col-reverse justify-center items-center">
           <div className="lg:w-1/2 flex justify-end lg:pr-10">
             <motion.div
@@ -95,6 +120,7 @@ const HomePage: NextPage = () => {
               variants={mainVarientsRight}
               animate={animation}
               initial="initial"
+              exit="initial"
               className="h-48 md:h-72 w-48 md:w-72 flex overflow-hidden"
               style={{ borderRadius: "50% 50% 50% 50% / 30% 30% 70% 70% " }}
             >
