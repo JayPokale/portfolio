@@ -67,18 +67,18 @@ const HomePage: NextPage = () => {
   }, [inView]);
 
   return (
-    <div className="max-w-7xl w-full mx-auto select-none relative">
+    <div className="max-w-7xl w-full mx-auto select-none">
       {inView && (
         <motion.div
           variants={mainVarientsSquares}
           animate={animation}
           initial="initial"
-          className="fixed flex justify-evenly w-full -z-10"
+          className="fixed max-w-7xl w-full h-[400px] flex flex-col lg:flex-row justify-between lg:justify-evenly -z-10"
         >
-          <div className="">
+          <div className="mx-auto">
             <SquareAnimation />
           </div>{" "}
-          <div className="">
+          <div className="mx-auto">
             <SquareAnimation />
           </div>
         </motion.div>

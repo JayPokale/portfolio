@@ -7,22 +7,22 @@ import { Box, Button, useColorModeValue } from "@chakra-ui/react";
 const mainVarientsLeft = {
   initial: {
     opacity: 0,
-    x: -100,
+    scale:0,
   },
   animate: {
     opacity: 1,
-    x: 0,
+    scale:1,
     transition: { duration: 0.3, type: "spring", stiffness: 100 },
   },
 };
 const mainVarientsRight = {
   initial: {
     opacity: 0,
-    x: 100,
+    scale:0,
   },
   animate: {
     opacity: 1,
-    x: 0,
+    scale:1,
     transition: { duration: 0.3, type: "spring", stiffness: 100 },
   },
 };
