@@ -26,7 +26,7 @@ const SkillsProfessional: NextPage = () => {
 
   return (
     <>
-      <div ref={ref} className="w-96 flex flex-wrap justify-evenly">
+      <div ref={ref} className="w-96 flex flex-wrap justify-evenly items-center scale-75 sm:scale-100 lg:scale-125 absolute -translate-y-1/3">
         {allSkills.map((skill) => eachSkill(skill, inView, i++))}
       </div>
     </>
@@ -39,7 +39,7 @@ const eachSkill = (skill: Skill, inView: boolean, i: number) => {
   return (
     <motion.div initial={{ opacity: 0, scale: 0.8 }}
     whileInView={{ opacity: 1, scale: 1 }}
-    transition={{ type: "spring", stiffness: 20, delay: i / 8 }}
+    transition={{ type: "spring", stiffness: 20, delay: i / 8 + 0.5 }}
     key={skill.skill} className="w-44 h-36 relative my-6">
       <div>
         <div className="absolute top-[44px] left-[72px] opacity-90 tracking-wider">{skill.progress}<span className="text-xs opacity-50">%</span></div>
