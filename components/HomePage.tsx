@@ -51,7 +51,6 @@ const mainVarientsBottom = {
 };
 
 const HomePage: NextPage = () => {
-
   const [ref, inView] = useInView();
   const animation = useAnimation();
   useEffect(() => {
@@ -67,22 +66,22 @@ const HomePage: NextPage = () => {
 
   return (
     <div className="max-w-7xl w-full mx-auto select-none">
-      {inView && (
-        <motion.div
-          variants={mainVarientsSquares}
-          animate={animation}
-          initial="initial"
-          className="fixed max-w-7xl w-full h-[400px] flex flex-col lg:flex-row justify-between lg:justify-evenly -z-10"
-        >
-          <div className="mx-auto">
-            <SquareAnimation />
-          </div>{" "}
-          <div className="mx-auto">
-            <SquareAnimation />
-          </div>
-        </motion.div>
-      )}
-      <div ref={ref}>
+      <div ref={ref} className="relative">
+        {inView && (
+          <motion.div
+            variants={mainVarientsSquares}
+            animate={animation}
+            initial="initial"
+            className="absolute max-w-7xl w-full h-[400px] flex flex-col lg:flex-row justify-between lg:justify-evenly -z-10"
+          >
+            <div className="mx-auto">
+              <SquareAnimation />
+            </div>{" "}
+            <div className="mx-auto">
+              <SquareAnimation />
+            </div>
+          </motion.div>
+        )}
         <div className="flex lg:flex-row flex-col-reverse justify-center items-center">
           <div className="lg:w-1/2 flex justify-end lg:pr-10">
             <motion.div
