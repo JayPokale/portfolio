@@ -6,6 +6,7 @@ import SkillsTechnical from "../components/SkillsTechnical";
 import SkillsProfessional from "../components/SkillsProfessional";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import SquareAnimation from "../animations/Square";
 
 const temporary: NextPage = () => {
   const [ref, inView] = useInView();
