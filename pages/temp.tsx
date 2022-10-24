@@ -7,6 +7,7 @@ import SkillsProfessional from "../components/SkillsProfessional";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import SquareAnimation from "../animations/Square";
+import SkillsPage from "../components/Skills";
 
 const temporary: NextPage = () => {
   const [ref, inView] = useInView();
@@ -19,13 +20,14 @@ const temporary: NextPage = () => {
       <div className="w-full fixed bottom-0">
         <NavBottom />
       </div>
-      <Box
+      {/* <Box
         fontFamily={"Roboto Mono"}
         className="pb-16 max-w-lg w-[90vw] flex justify-center relative"
-      >
+      > */}
         {/* <SkillsTechnical/> */}
-        <SkillsProfessional/>
-      </Box>
+        {/* <SkillsProfessional/> */}
+        <SkillsPage/>
+      {/* </Box> */}
     </div>
   );
 };

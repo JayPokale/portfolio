@@ -4,6 +4,7 @@ import AboutPage from "../components/AboutPage";
 import ContactPage from "../components/ContactPage";
 import NavTop from "../components/NavTop";
 import NavBottom from "../components/NavBottom";
+import SkillsPage from "../components/Skills";
 
 const Home: NextPage = () => {
   return (
@@ -19,7 +20,7 @@ const Home: NextPage = () => {
           <HomePage />
         </div>
         <div className="h-screen snap-center flex items-center">
-          <AboutPage />
+          <SkillsPage/>
         </div>
         <div className="h-screen snap-center flex items-center">
           <ContactPage />

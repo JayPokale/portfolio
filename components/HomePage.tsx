@@ -5,19 +5,8 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import { Box, Text } from "@chakra-ui/react";
-import SquareAnimation from "../animations/Square";
 
-const mainVarientsSquares = {
-  initial: {
-    opacity: 0,
-    scale: 0,
-  },
-  animate: {
-    opacity: 1,
-    scale: 1,
-    transition: { duration: 0.3, type: "spring", stiffness: 100 },
-  },
-};
+
 const mainVarientsLeft = {
   initial: {
     opacity: 0,

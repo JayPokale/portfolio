@@ -1,5 +1,5 @@
 import { NextPage } from "next";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 class Skill {
@@ -25,11 +25,21 @@ const SkillsProfessional: NextPage = () => {
   let i = 0;
 
   return (
-    <>
-      <div ref={ref} className="w-96 flex flex-wrap justify-evenly items-center scale-75 sm:scale-100 lg:scale-125 absolute -translate-y-1/3">
+    <AnimatePresence>
+      <div
+        ref={ref}
+        className="w-2/3 h-5/6 absolute -z-10 bg-gray-500 opacity-5"
+        style={{ borderRadius: "30% 70% 30% 70% / 25% 40% 60% 75%" }}
+      ></div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        className="w-96 flex flex-wrap justify-evenly items-center scale-75 sm:scale-100 lg:scale-125 absolute lg:mt-4"
+      >
         {allSkills.map((skill) => eachSkill(skill, inView, i++))}
-      </div>
-    </>
+      </motion.div>
+    </AnimatePresence>
   );
 };
 
@@ -37,12 +47,18 @@ export default SkillsProfessional;
 
 const eachSkill = (skill: Skill, inView: boolean, i: number) => {
   return (
-    <motion.div initial={{ opacity: 0, scale: 0.8 }}
-    whileInView={{ opacity: 1, scale: 1 }}
-    transition={{ type: "spring", stiffness: 20, delay: i / 8 + 0.5 }}
-    key={skill.skill} className="w-44 h-36 relative my-6">
+    <motion.div
+      initial={{ opacity: 0, scale: 0.8 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ type: "spring", stiffness: 20, delay: i / 8 + 0.5 }}
+      key={skill.skill}
+      className="w-44 h-36 relative my-6"
+    >
       <div>
-        <div className="absolute top-[44px] left-[72px] opacity-90 tracking-wider">{skill.progress}<span className="text-xs opacity-50">%</span></div>
+        <div className="absolute top-[44px] left-[72px] opacity-90 tracking-wider">
+          {skill.progress}
+          <span className="text-xs opacity-50">%</span>
+        </div>
         <svg viewBox="-2 -2 64 64" className="transform -rotate-90 px-8">
           <motion.circle
             animate={{
@@ -52,7 +68,7 @@ const eachSkill = (skill: Skill, inView: boolean, i: number) => {
               transition: {
                 type: "spring",
                 stiffness: 20,
-                delay:i/8,
+                delay: i / 8,
               },
             }}
             fill="none"
@@ -76,7 +92,7 @@ const eachSkill = (skill: Skill, inView: boolean, i: number) => {
           />
         </svg>
       </div>
-      <div className="flex justify-center opacity-80 py-2">{skill.skill}</div>
+      <div className="flex text-sm justify-center opacity-80 py-2">{skill.skill}</div>
     </motion.div>
   );
 };
