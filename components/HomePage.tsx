@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
-import { Box, Text, useColorModeValue } from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
 import SquareAnimation from "../animations/Square";
 
 const mainVarientsSquares = {
@@ -51,7 +51,6 @@ const mainVarientsBottom = {
 };
 
 const HomePage: NextPage = () => {
-  const toggleOrange = useColorModeValue("orange.400", "orange.300");
 
   const [ref, inView] = useInView();
   const animation = useAnimation();
@@ -98,7 +97,7 @@ const HomePage: NextPage = () => {
                 <Text
                   as={"span"}
                   fontWeight="semibold"
-                  color={toggleOrange}
+                  color={"orange.400"}
                   opacity={0.9}
                 >
                   Jay Pokale
@@ -107,7 +106,7 @@ const HomePage: NextPage = () => {
                 <Text
                   as={"span"}
                   fontWeight="semibold"
-                  color={toggleOrange}
+                  color={"orange.400"}
                   opacity={0.9}
                 >
                   Dare2Solve
@@ -135,7 +134,7 @@ const HomePage: NextPage = () => {
           className="flex justify-center my-4 text-lg md:text-2xl lg:text-6xl"
         >
           <div>I am a &#160;</div>
-          <Box fontWeight="semibold" color={toggleOrange}>
+          <Box fontWeight="semibold" color={"orange.400"}>
             <Typewriter
               onInit={(typewriter) => {
                 typewriter

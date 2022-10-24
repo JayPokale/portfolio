@@ -11,6 +11,30 @@
 
 // }
 
+
+// const isPrime = (n) => {
+//   let mod = 1
+//   for(let i=2; i<n-1;i++){
+//     mod*=i
+//     mod%=n
+//   }
+//   if(mod==1) console.log(true)
+//   else console.log(false)
+// }
+// isPrime(123456791)
+
+
+// function easeInOutQuad(x) {return x < 0.5 ? 2 * x * x : 1 - Math.pow(-2 * x + 2, 2) / 2}
+// let [i, x, t] = [0, 10, 0];
+// const increase = (i, x, t) => {
+//   if (t <= 50) {
+//     console.log(i);
+//     i = Math.round(easeInOutQuad(t++ / 50) * x);
+//     setTimeout(() => {increase(i, x, t)}, 100);
+//   }
+// };
+// increase(i,x,t)
+
 // const isDecreasing = (arr) => {
 //   let out = true
 //   for(let i=1; i<arr.length; i++){
@@ -31,7 +55,6 @@
 // if(temp.some( x => x < 0 )) console.log(-1)
 // else if(isDecreasing(temp)) console.log(temp[0])
 // else console.log(-1)
-
 
 // let arr = [2, 1, 3, 3,4,2, 3, 4];
 // const result = arr.reduce((a, b) => {

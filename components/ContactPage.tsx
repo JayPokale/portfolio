@@ -12,7 +12,7 @@ const mainVarientsLeft = {
   animate: {
     opacity: 1,
     scale:1,
-    transition: { duration: 0.3, type: "spring", stiffness: 100 },
+    transition: { type: "spring", stiffness: 100 },
   },
 };
 const mainVarientsRight = {
@@ -23,12 +23,11 @@ const mainVarientsRight = {
   animate: {
     opacity: 1,
     scale:1,
-    transition: { duration: 0.3, type: "spring", stiffness: 100 },
+    transition: { type: "spring", stiffness: 100 },
   },
 };
 
 const HomePage: NextPage = () => {
-  const toggleOrange = useColorModeValue("orange.400", "orange.300");
   const toggleForGray = useColorModeValue('d1d5db', '475569');
 
   const [ref, inView] = useInView();
@@ -65,7 +64,7 @@ const HomePage: NextPage = () => {
                     placeholder=" "
                   />
                   <label
-                    className="absolute mx-[2px] px-4 duration-300 transform top-3 origin-top-left z-10 text-orange-400 font-bold scale-[60%] -translate-y-4 md:-translate-y-5 lg:-translate-y-6 peer-placeholder-shown:-z-10 peer-placeholder-shown:text-gray-500 peer-placeholder-shown:font-normal peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:z-10 peer-focus:text-orange-400 peer-focus:font-bold peer-focus:scale-[60%] peer-focus:-translate-y-4 peer-focus:md:-translate-y-5 peer-focus:md:lg:-translate-y-6"
+                    className="absolute mx-[2px] px-4 duration-300 transform top-3 origin-top-left z-10 text-orange-500 font-bold scale-[60%] -translate-y-4 md:-translate-y-5 lg:-translate-y-6 peer-placeholder-shown:-z-10 peer-placeholder-shown:text-gray-500 peer-placeholder-shown:font-normal peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:z-10 peer-focus:text-orange-500 peer-focus:font-bold peer-focus:scale-[60%] peer-focus:-translate-y-4 peer-focus:md:-translate-y-5 peer-focus:md:lg:-translate-y-6"
                   >
                     Name
                   </label>
@@ -78,7 +77,7 @@ const HomePage: NextPage = () => {
                     placeholder=" "
                   />
                   <label
-                    className="absolute mx-[2px] px-4 duration-300 transform top-3 origin-top-left z-10 text-orange-400 font-bold scale-[60%] -translate-y-4 md:-translate-y-5 lg:-translate-y-6 peer-placeholder-shown:-z-10 peer-placeholder-shown:text-gray-500 peer-placeholder-shown:font-normal peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:z-10 peer-focus:text-orange-400 peer-focus:font-bold peer-focus:scale-[60%] peer-focus:-translate-y-4 peer-focus:md:-translate-y-5 peer-focus:md:lg:-translate-y-6"
+                    className="absolute mx-[2px] px-4 duration-300 transform top-3 origin-top-left z-10 text-orange-500 font-bold scale-[60%] -translate-y-4 md:-translate-y-5 lg:-translate-y-6 peer-placeholder-shown:-z-10 peer-placeholder-shown:text-gray-500 peer-placeholder-shown:font-normal peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:z-10 peer-focus:text-orange-500 peer-focus:font-bold peer-focus:scale-[60%] peer-focus:-translate-y-4 peer-focus:md:-translate-y-5 peer-focus:md:lg:-translate-y-6"
                   >
                     Email
                   </label>
@@ -91,7 +90,7 @@ const HomePage: NextPage = () => {
                     placeholder=" "
                   />
                   <label
-                    className="absolute mx-[2px] px-4 duration-300 transform top-3 origin-top-left z-10 text-orange-400 font-bold scale-[60%] -translate-y-4 md:-translate-y-5 lg:-translate-y-6 peer-placeholder-shown:-z-10 peer-placeholder-shown:text-gray-500 peer-placeholder-shown:font-normal peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:z-10 peer-focus:text-orange-400 peer-focus:font-bold peer-focus:scale-[60%] peer-focus:-translate-y-4 peer-focus:md:-translate-y-5 peer-focus:md:lg:-translate-y-6"
+                    className="absolute mx-[2px] px-4 duration-300 transform top-3 origin-top-left z-10 text-orange-500 font-bold scale-[60%] -translate-y-4 md:-translate-y-5 lg:-translate-y-6 peer-placeholder-shown:-z-10 peer-placeholder-shown:text-gray-500 peer-placeholder-shown:font-normal peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:z-10 peer-focus:text-orange-500 peer-focus:font-bold peer-focus:scale-[60%] peer-focus:-translate-y-4 peer-focus:md:-translate-y-5 peer-focus:md:lg:-translate-y-6"
                   >
                     Subject
                   </label>
@@ -104,7 +103,7 @@ const HomePage: NextPage = () => {
                     placeholder=" "
                   />
                   <label
-                    className="absolute mx-[2px] px-4 duration-300 transform top-3 origin-top-left z-10 text-orange-400 font-bold scale-[60%] -translate-y-4 md:-translate-y-5 lg:-translate-y-6 peer-placeholder-shown:-z-10 peer-placeholder-shown:text-gray-500 peer-placeholder-shown:font-normal peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:z-10 peer-focus:text-orange-400 peer-focus:font-bold peer-focus:scale-[60%] peer-focus:-translate-y-4 peer-focus:md:-translate-y-5 peer-focus:md:lg:-translate-y-6"
+                    className="absolute mx-[2px] px-4 duration-300 transform top-3 origin-top-left z-10 text-orange-500 font-bold scale-[60%] -translate-y-4 md:-translate-y-5 lg:-translate-y-6 peer-placeholder-shown:-z-10 peer-placeholder-shown:text-gray-500 peer-placeholder-shown:font-normal peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:z-10 peer-focus:text-orange-500 peer-focus:font-bold peer-focus:scale-[60%] peer-focus:-translate-y-4 peer-focus:md:-translate-y-5 peer-focus:md:lg:-translate-y-6"
                   >
                     Content
                   </label>
@@ -135,13 +134,13 @@ const HomePage: NextPage = () => {
               ></div>
               <div className="flex flex-col justify-between items-center w-full h-full" style={{textShadow:'0 0 1px'}}>
                 <Box
-                  textColor={toggleOrange}
+                  textColor={"orange.400"}
                   className="text-xl sm:text-3xl md:text-5xl font-semibold"
                 >
                   CONTACT
                   <div className="flex items-center">
                     <Box
-                      bg={toggleOrange}
+                      bg={"orange.400"}
                       className="h-1 w-14 sm:w-24 md:w-40 mx-1.5 lg:mx-2"
                     ></Box>
                     <div>US</div>

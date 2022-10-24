@@ -22,8 +22,8 @@ const temporary: NextPage = () => {
         fontFamily={"Roboto Mono"}
         className="pb-16 max-w-lg w-[90vw] flex justify-center relative"
       >
-        {/* <SkillsTechnical/> */}
-        <SkillsProfessional/>
+        <SkillsTechnical/>
+        {/* <SkillsProfessional/> */}
       </Box>
     </div>
   );
