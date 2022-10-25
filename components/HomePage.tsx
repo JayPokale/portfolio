@@ -38,7 +38,7 @@ const mainVarientsBottom = {
 
 const HomePage: NextPage = () => {
   return (
-    <div className="max-w-7xl w-full mx-auto select-none">
+    <div className="max-w-7xl w-full mx-auto select-none my-24">
       <div className="flex lg:flex-row flex-col-reverse justify-center items-center">
         <div className="lg:w-1/2 flex justify-end lg:pr-10">
           <motion.div

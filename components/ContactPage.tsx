@@ -29,7 +29,7 @@ const HomePage: NextPage = () => {
   const toggleForGray = useColorModeValue("d1d5db", "475569");
 
   return (
-    <div className="max-w-7xl w-full mx-auto select-none">
+    <div className="max-w-7xl w-full mx-auto select-none my-24">
       <div className="flex md:flex-row flex-col-reverse justify-center items-center gap-4 sm:gap-10 md:gap-18 lg:gap-28">
         {/* Part 1 */}
         <div className="md:w-1/2 flex justify-end">
