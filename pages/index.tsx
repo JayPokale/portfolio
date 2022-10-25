@@ -10,16 +10,16 @@ const Home: NextPage = () => {
   return (
     <>
       <div className="h-screen">
-        <div className="fixed top-0 w-full z-10">
+        <div className="fixed w-full z-10 top-0">
           <NavTop />
         </div>
-        <div className="fixed bottom-0 w-full z-10">
+        <div className="fixed w-full z-10 bottom-0">
           <NavBottom />
         </div>
-        <div className="h-screen flex items-center">
+        <div className="h-screen flex items-center py-24">
           <HomePage />
         </div>
-        <div className="h-screen flex items-center">
+        <div className="h-screen flex items-center py-24">
           <SkillsPage/>
         </div>
         <div className="h-screen flex items-center py-24">
