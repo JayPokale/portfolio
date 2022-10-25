@@ -43,13 +43,13 @@ const mainVarientsBottom = {
 const HomePage: NextPage = () => {
   return (
     <div className="max-w-7xl w-full mx-auto select-none py-24">
-      <div className="flex lg:flex-row flex-col-reverse justify-center items-center gap-6 sm:gap-0">
-        <div className="lg:w-1/2 flex justify-end lg:pr-10">
+      <div className="flex md:flex-row flex-col-reverse justify-center items-center gap-6 lg:gap-0">
+        <div className="lg:w-1/2 flex justify-end md:pr-10">
           <motion.div
             variants={mainVarientsLeft}
             whileInView="animate"
             initial="initial"
-            className="text-2xl md:text-4xl"
+            className="text-2xl xs:text-3xl md:text-4xl"
           >
             <div className="text-gray-500">
               Hello,
@@ -91,7 +91,7 @@ const HomePage: NextPage = () => {
         variants={mainVarientsBottom}
         whileInView="animate"
         initial="initial"
-        className="flex justify-center my-4 text-lg md:text-2xl lg:text-6xl"
+        className="flex justify-center my-4 text-lg sm:text-xl md:text-4xl lg:text-6xl"
       >
         <div>I am a &#160;</div>
         <Box fontWeight="semibold" color={"orange.400"}>
