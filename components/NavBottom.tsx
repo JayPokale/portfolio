@@ -23,7 +23,7 @@ const NavBottom: NextPage = () => {
         variants={navVarients}
         animate="animate"
         initial="initial"
-        className="flex justify-center items-center"
+        className="flex justify-center items-center text-xs xs:text-base"
       >
         <ul className="flex gap-4 md:gap-6 py-2">
           <li className="cursor-pointer">Home</li>

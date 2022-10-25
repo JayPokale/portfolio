@@ -42,8 +42,8 @@ const mainVarientsBottom = {
 
 const HomePage: NextPage = () => {
   return (
-    <div className="max-w-7xl w-full mx-auto select-none my-24">
-      <div className="flex lg:flex-row flex-col-reverse justify-center items-center">
+    <div className="max-w-7xl w-full mx-auto select-none py-24">
+      <div className="flex lg:flex-row flex-col-reverse justify-center items-center gap-6 sm:gap-0">
         <div className="lg:w-1/2 flex justify-end lg:pr-10">
           <motion.div
             variants={mainVarientsLeft}
@@ -80,7 +80,7 @@ const HomePage: NextPage = () => {
             whileInView="animate"
             initial="initial"
             exit="initial"
-            className="h-48 md:h-72 w-48 md:w-72 flex overflow-hidden"
+            className="max-h-[288px] h-[80vw] md:h-72 max-w-[288px] w-[80vw] md:w-72 flex overflow-hidden"
             style={{ borderRadius: "50% 50% 50% 50% / 30% 30% 70% 70% " }}
           >
             <Image src={"/jay.png"} width={288} height={288}></Image>
