@@ -9,20 +9,20 @@ import SkillsPage from "../components/Skills";
 const Home: NextPage = () => {
   return (
     <>
-      <div className="h-screen snap-y snap-mandatory overflow-y-scroll">
+      <div className="h-screen">
         <div className="fixed top-0 w-full z-10">
           <NavTop />
         </div>
         <div className="fixed bottom-0 w-full z-10">
           <NavBottom />
         </div>
-        <div className="h-screen snap-center flex items-center">
+        <div className="h-screen flex items-center">
           <HomePage />
         </div>
-        <div className="h-screen snap-center flex items-center">
+        <div className="h-screen flex items-center">
           <SkillsPage/>
         </div>
-        <div className="h-screen snap-center flex items-center">
+        <div className="h-screen flex items-center">
           <ContactPage />
         </div>
       </div>
