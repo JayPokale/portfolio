@@ -29,21 +29,18 @@ const SkillsTechnical: NextPage = () => {
   let i = 0;
 
   return (
-    <AnimatePresence>
+    <>
       <div
         ref={ref}
         className="w-2/3 h-5/6 absolute -z-10 bg-gray-500 opacity-5"
         style={{ borderRadius: "30% 70% 30% 70% / 25% 40% 60% 75%" }}
       ></div>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
+      <div
         className="w-full gap-10 flex flex-col mt-8 lg:mt-0"
       >
         {allSkills.map((skill) => eachSkill(skill, inView, i++))}
-      </motion.div>
-    </AnimatePresence>
+      </div>
+    </>
   );
 };
 
