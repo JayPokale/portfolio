@@ -7,22 +7,26 @@ import { Box, Text } from "@chakra-ui/react";
 const mainVarientsLeft = {
   initial: {
     opacity: 0,
-    x: -50,
+    x:0,
+    scale:0.8,
   },
   animate: {
     opacity: 1,
     x: 0,
+    scale:1,
     transition: { type: "spring", stiffness: 50 },
   },
 };
 const mainVarientsRight = {
   initial: {
     opacity: 0,
-    x: 50,
+    x:0,
+    scale:0.8,
   },
   animate: {
     opacity: 1,
     x: 0,
+    scale:1,
     transition: { type: "spring", stiffness: 50 },
   },
 };

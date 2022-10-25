@@ -11,6 +11,10 @@
 
 // }
 
+// let i = 1
+// while(i++<=5) {
+//   setTimeout(() => console.log(i), i * 1000);
+// }
 
 // const isPrime = (n) => {
 //   let mod = 1
@@ -22,7 +26,6 @@
 //   else console.log(false)
 // }
 // isPrime(123456791)
-
 
 // function easeInOutQuad(x) {return x < 0.5 ? 2 * x * x : 1 - Math.pow(-2 * x + 2, 2) / 2}
 // let [i, x, t] = [0, 10, 0];
