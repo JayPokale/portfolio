@@ -109,7 +109,7 @@ const HomePage: NextPage = () => {
                   </label>
                 </div>
 
-                <Button size={["sm", "md", "lg"]} className={`relative my-2 md:my-3 lg:my-4 after:w-0 overflow-hidden after:h-full after:absolute after:left-0 hover:after:w-full after:transition-all after:duration-300`}
+                <Button as={"div"} size={["sm", "md", "lg"]} className={`relative my-2 md:my-3 lg:my-4 after:w-0 overflow-hidden after:h-full after:absolute after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer`}
                 _hover={{ bg: '' }}
                 css={{
                   '&::after':{backgroundColor:`#${toggleForGray}`}

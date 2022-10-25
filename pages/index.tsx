@@ -22,7 +22,7 @@ const Home: NextPage = () => {
         <div className="h-screen flex items-center">
           <SkillsPage/>
         </div>
-        <div className="h-screen flex items-center">
+        <div className="h-screen flex items-center py-24">
           <ContactPage />
         </div>
       </div>
