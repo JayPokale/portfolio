@@ -47,7 +47,7 @@ const eachSkill = (skill: Skill, inView: boolean, i: number) => {
     <motion.div
       initial={{ opacity: 0, scale: 0.8 }}
       whileInView={{ opacity: 1, scale: 1 }}
-      transition={{ type: "spring", stiffness: 20, delay: i / 8 + 0.5 }}
+      transition={{ type: "spring", stiffness: 20, delay: i / 16 }}
       key={skill.skill}
       className="w-44 h-36 relative my-6"
     >
@@ -64,8 +64,8 @@ const eachSkill = (skill: Skill, inView: boolean, i: number) => {
                 : 2 * Math.PI * 30,
               transition: {
                 type: "spring",
-                stiffness: 20,
-                delay: i / 8,
+                stiffness: 40,
+                delay: i / 16,
               },
             }}
             fill="none"

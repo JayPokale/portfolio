@@ -49,9 +49,9 @@ const eachSkill = (skill: Skill, inView: boolean, i: number) => {
 
   return (
     <motion.div
-      initial={{ opacity: 0, x: -50 }}
+      initial={{ opacity: 0, x: -25 }}
       whileInView={{ opacity: 1, x: 0 }}
-      transition={{ type: "spring", stiffness: 50, delay: i / 8 }}
+      transition={{ type: "spring", stiffness: 50, delay: i / 16 }}
       className="w-[80%] h-4"
       key={skill.skill}
     >
@@ -75,8 +75,8 @@ const eachSkill = (skill: Skill, inView: boolean, i: number) => {
             width: inView ? `${skill.progress}%` : "0%",
             transition: {
               type: "spring",
-              stiffness: 20,
-              delay: i / 8,
+              stiffness: 40,
+              delay: i / 16,
             },
           }}
           className="absolute h-2 bg-orange-500 rounded-full shadow-md"
