@@ -16,13 +16,13 @@ const Home: NextPage = () => {
         <div className="fixed w-full z-10 bottom-0">
           <NavBottom />
         </div>
-        <div className="min-h-screen flex items-center">
+        <div id="home" className="min-h-screen flex items-center">
           <HomePage />
         </div>
-        <div className="min-h-screen flex items-center">
+        <div id="skill" className="min-h-screen flex items-center">
           <SkillsPage/>
         </div>
-        <div className="min-h-screen flex items-center">
+        <div id="contact" className="min-h-screen flex items-center">
           <ContactPage />
         </div>
       </div>

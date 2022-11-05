@@ -26,11 +26,9 @@ const NavBottom: NextPage = () => {
         className="flex justify-center items-center text-xs xs:text-base"
       >
         <ul className="flex gap-4 md:gap-6 py-2">
-          <li className="cursor-pointer">Home</li>
-          <li className="cursor-pointer">About</li>
-          <li className="cursor-pointer">Skills</li>
-          <li className="cursor-pointer">Work</li>
-          <li className="cursor-pointer">Contact</li>
+          <a href="#home" className="cursor-pointer">Home</a>
+          <a href="#skill" className="cursor-pointer">Skills</a>
+          <a href="#contact" className="cursor-pointer">Contact</a>
         </ul>
       </motion.div>
     </Box>

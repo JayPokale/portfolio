@@ -6,7 +6,7 @@ import {
   FaInstagram,
   FaTwitter,
   FaGithub,
-  FaPinterest,
+  FaLinkedinIn,
 } from "react-icons/fa";
 
 const navVarients = {
@@ -16,7 +16,7 @@ const navVarients = {
   },
   animate: {
     opacity: 1,
-    y: 0,
+    y: 10,
     transition: { type: "spring", stiffness: 50 },
   },
 };
@@ -35,23 +35,23 @@ const NavTop: NextPage = () => {
         className="w-full flex justify-between items-center px-4 sticky"
       >
         <div>
-          <ul className="flex gap-4 md:gap-6 opacity-75 text-xl">
-            <li className="cursor-pointer">
+          <nav className="flex gap-4 md:gap-6 opacity-75 text-xl">
+            <a href="https://www.facebook.com/dare2solve" className="cursor-pointer">
               <FaFacebookF />
-            </li>
-            <li className="cursor-pointer">
+            </a>
+            <a href="https://www.instagram.com/dare2solve/" className="cursor-pointer">
               <FaInstagram />
-            </li>
-            <li className="cursor-pointer">
+            </a>
+            <a href="https://twitter.com/dare2solve" className="cursor-pointer">
               <FaTwitter />
-            </li>
-            <li className="cursor-pointer">
+            </a>
+            <a href="https://github.com/JayPokale" className="cursor-pointer">
               <FaGithub />
-            </li>
-            <li className="cursor-pointer">
-              <FaPinterest />
-            </li>
-          </ul>
+            </a>
+            <a href="https://www.linkedin.com/in/jay-pokale-809942143/" className="cursor-pointer">
+              <FaLinkedinIn />
+            </a>
+          </nav>
         </div>
         <div>
           <Button onClick={toggleColorMode} zIndex="10">
