@@ -8,6 +8,7 @@ import {
   FaGithub,
   FaLinkedinIn,
 } from "react-icons/fa";
+import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 
 const navVarients = {
   initial: {
@@ -16,7 +17,7 @@ const navVarients = {
   },
   animate: {
     opacity: 1,
-    y: 10,
+    y: 5,
     transition: { type: "spring", stiffness: 50 },
   },
 };
@@ -54,9 +55,9 @@ const NavTop: NextPage = () => {
           </nav>
         </div>
         <div>
-          <Button onClick={toggleColorMode} zIndex="10">
-            {colorMode === "light" ? "Dark" : "Light"}
-          </Button>
+          <div onClick={toggleColorMode} className="text-xl cursor-pointer">
+          {colorMode === "light" ? <SunIcon/> : <MoonIcon/>}
+          </div>
         </div>
       </motion.div>
     </Box>
